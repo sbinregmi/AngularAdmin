@@ -1,0 +1,42 @@
+<mat-nav-list>
+    
+   
+    <div class="profile-card" *ngIf="sideBarOpen">    
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/profile">
+            <mat-icon *ngIf="!sideBarOpen" matTooltip="Profile" matToolTipClass="material-tooltip">manage_accounts</mat-icon>
+        </a>
+            <div class="header">
+        <h2>John</h2>
+        <h4>example@gmail.com</h4>
+    </div>
+
+    <img src="https://lh6.googleusercontent.com/-3x5wy7xO4e8/AAAAAAAAAAI/AAAAAAAAABA/2K7IoP75a0U/photo.jpg?sz=256">
+
+</div>
+<mat-divider></mat-divider>
+<h2 matSubheader *ngIf="sideBarOpen">Pages</h2>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+    <mat-icon matTooltip="Dashboard" matToolTipClass="material-tooltip">home</mat-icon>
+    <span *ngIf="sideBarOpen">Dashboard</span>
+</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">
+    <mat-icon matTooltip="Post" matToolTipClass="material-tooltip">dynamic_feed</mat-icon>
+    <span *ngIf="sideBarOpen">Posts</span>
+</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">
+    <mat-icon matTooltip="Articles" matToolTipClass="material-tooltip">article</mat-icon>
+    <span *ngIf="sideBarOpen">Articles</span>
+</a>
+
+<mat-divider></mat-divider>
+<h2 matSubheader matLine *ngIf="sideBarOpen">Tools</h2>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <mat-icon matTooltip="Contacts" matToolTipClass="material-tooltip">import_contacts</mat-icon>
+    <span *ngIf="sideBarOpen">Contacts</span>
+</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <mat-icon matTooltip="Leads" matToolTipClass="material-tooltip">contact_phone</mat-icon>
+    <span *ngIf="sideBarOpen">Leads</span>
+    
+</a>
+</mat-nav-list>
